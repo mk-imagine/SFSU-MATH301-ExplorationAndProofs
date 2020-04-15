@@ -1,2 +1,2 @@
-# SFSU-MATH301-Exploration-and-Proof
-Exploration and Proof
+# MATH-301 Exploration and Proof
+Introduction to Mathematical Proofs
