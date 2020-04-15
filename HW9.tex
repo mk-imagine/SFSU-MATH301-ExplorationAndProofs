@@ -1,0 +1,24 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 8}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+$1\in\N$
+\end{proposition}
+
+\begin{proof}
+With the goal of producing a contradiction, let us assume $1\notin\N$.  Axiom 2.1(iv) supplies us with three cases, of which $m\in\N$ does not apply.  We can also rule out $m=0$ since Axiom 1.3 explicitly states $1\neq0$.  Testing the third and final case $-m\in\N$, we can write $-1\in\N$.  Using Axiom 2.1(ii), the statement $mn\in\N$ can be written as $(-1)(-1)\in\N$ since $-1\in\N$.  Corollary 1.21 states $(-1)(-1)=1$, which gives us the result $1\in\N$, contradicting our initial assumption.  We have therefore proven that $1\in\N$.
+\end{proof}
+
+\end{document}

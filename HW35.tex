@@ -1,0 +1,26 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 35}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $x_1$ and $x_2$ are least upper bounds for $A$, then $x_1=x_2$.
+\end{proposition}
+
+\begin{proof}
+Assume $x_1$ and $x_2$ are least upper bounds for $A$.  By definition, this means that $x_1$ is less than or equal to all other upper bounds of $A$ and since $x_2$ is also an upper bound of $A$, $x_1 \leq x_2$.  Likewise, $x_2$ is less than or equal to all other upper bounds of $A$ and since $x_1$ is also an upper bound of $A$, $x_2 \leq x_1$.  Since $x_1$ cannot be simultaneously less than and greater than $x_2$, $x_1=x_2$, proving the proposition.
+\end{proof}
+\end{document}

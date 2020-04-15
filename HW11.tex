@@ -1,0 +1,30 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 11}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $m\in\N$ and $n\in\Z$. If $mn\in\N$, then $n\in\N$.
+\end{proposition}
+
+\begin{proof}
+Assume $m\in\N$, $n\in\Z$, and $mn\in\N$.  Proposition 2.2 states one and only one of the following applies: $n=0$, $-n\in\N$, $n\in\N$.  We can rule out the first case $n=0$ since $m\cdot0=0$ and Axiom 2.1(iii) explicitly states $0\notin\N$.  In the second case, $-n\in\N$, we have $m\cdot(-n)=-(mn)\in\N$, but this directly contradicts our assumption of $mn\in\N$.  Since the first two cases are not true, the last case must be true and $n\in\N$.  Thus we have proven that if $mn\in\N$, then $n\in\N$.
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Assume $m\in\N$, $n\in\Z$, and $mn\in\N$.  Proposition 2.2 states one and only one of the following applies: $n=0$, $-n\in\N$, $n\in\N$.  We can rule out the first case $n=0$ since $m\cdot0=0$ and Axiom 2.1(iii) explicitly states $0\notin\N$.  In the second case, $-n\in\N$, we have $m\cdot(-n)=-(mn)\in\N$, but this contradicts Proposition 2.2 since we assume that $mn\in\N$.\footnote{In the first version of the proof, I did not justify the contradiction.  I simply cited Proposition 2.2 which states that only one case applies.} Since the first two cases are not true, the last case must be true and $n\in\N$.  Thus we have proven that if $mn\in\N$, then $n\in\N$.
+\end{proof}
+
+\end{document}

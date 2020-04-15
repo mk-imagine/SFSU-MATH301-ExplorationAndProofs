@@ -1,0 +1,26 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 25}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $f\colon A\rightarrow B$ is surjective and $g\colon B\rightarrow C$ is surjective then $g\circ f\colon A\rightarrow C$ is surjective.
+\end{proposition}
+
+\begin{proof}
+Assume $f\colon A\rightarrow B$ and $g\colon B\rightarrow C$ are both surjective. By definition, this means for every $b\in B$, there exists $a\in A$ such that $f(a)=b$. Similarly, for every $c\in C$, there exists $f(a)=b\in B$, such that $g(b)=g(f(a))=c\in C$, which proves our proposition.
+\end{proof}
+
+\end{document}

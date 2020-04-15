@@ -1,0 +1,35 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 8}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+For all $m,n,p,q\in\Z$, $m-n=p-q$ if and only if $m+q=n+p$.
+\end{proposition}
+
+\begin{proof}
+Let $m,n,p,q\in\Z$. To prove this proposition, let us first assume that $m-n=p-q$.  By definition, this statement can be written as $m+(-n)=p+(-q)$.  Now, we can add $n$ to both sides of the equation which results in $(m+(-n))+n =(p+(-q))+n$.  Applying Axiom 1.1(ii) to both sides of the equation yields us $m+((-n)+n)=p+((-q)+n)$.  By using Proposition 1.8 on the left side of the equation and proposition 1.11(iii) on the right side of the equation, we can form $m+0=(n+p)+(-q)$.  Axiom 1.2 allows us to rewrite $m+0$ as $m$ on the left portion of the equation and then by adding $q$ to both sides we can write $m+q=((n+p)+(-q))+q$.  By applying Axiom 1.1(ii), Proposition 1.8, and Axiom 1.2 on the right side of the equation we can produce
+\begin{align*}
+m+q&=(n+p)+((-q)+q),\\
+m+q&=(n+p)+0,\text{ and}\\
+m+q&=n+p,
+\end{align*}
+respectively.  Because our proposition states that both statements are true if and only if the other is true, we must also prove that if $m+q=n+p$ then $m-n=p-q$ is also true.  So now let us assume $m+q=n+p$.  We can begin by adding $-q$ to both sides of the equation to formulate $(m+q)+(-q)=(n+p)+(-q)$.  By using Axiom 1.1(ii) on both sides of the equation, we can write $m+(q+(-q))=n+(p+(-q))$.  Next, we can form $m+0=(p+(-q))+n$ through the use of Axiom 1.4 on the left side of the equation and Axiom 1.1 on the right side of the equation.  Applying Axiom 1.2 on the left side of the expression and then adding $-n$ to both sides leaves us with $m+(-n)=((p+(-q))+n)+(-n)$.  Using Axioms 1.1(ii), 1.4, and 1.2 in succession on the right side of the equation allows us to write
+\begin{align*}
+m+(-n)&=(p+(-q))+(n+(-n)),\\
+m+(-n)&=(p+(-q)+0,\text{ and}\\
+m+(-n)&=p+(-q).
+\end{align*}
+Finally, by definition, we can write $m+(-n)=p+(-q)$ as $m-n=p-q$.  In conclusion, we have proven that for all $m,n,p,q\in\Z$, $m-n=p-q$ if and only if $m+q=n+p$.
+\end{proof}
+
+\end{document}

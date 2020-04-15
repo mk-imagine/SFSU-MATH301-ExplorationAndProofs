@@ -1,0 +1,39 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 16}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+For all $k\in\N$, $2^{2k+1} + 1$ is divisible by 3.
+\end{proposition}
+
+\begin{proof}
+Let $k\in\N$. We proceed by induction and must prove the base case and the induction step.
+
+Using the base case, $k=1$, notice that $2^{2(1)+1} + 1=9$ is divisible by $3$.
+
+Continuing with the induction step, we assume $2^{2n+1} + 1 = 3i$ for some $n\in\N$ and $i\in\Z$.  To start, we can simplify $2^{2(n+1)+1} + 1$,  to form $2^{2n+3} + 1.$ By applying Proposition 4.6(ii) and simplifying, we can see that
+\begin{align*}
+2^{2n+3} + 1 &= 2^{2n+1} \cdot 2 \cdot 2 + 1\\
+&= 2^{2n+1} \cdot 4 + 1.
+\end{align*}
+Using our assumption, $2^{2n+1} + 1 = 3i$, we can surmise that $2^{2n+1}= 3i - 1$.  Substituting this back into $2^{2n+1} \cdot 4 + 1$, we can deduce that
+\begin{align*}
+	(3i-1)4 + 1 &= 12i - 4 + 1\\
+	&= 12i-3\\
+	&= 3(4i-1),
+\end{align*}
+which proves that for all $k\in\N$, $2^{2k+1} + 1$ is divisible by 3.
+\end{proof}
+
+\end{document}

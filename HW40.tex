@@ -1,0 +1,64 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 40}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $\lim\limits_{k\rightarrow\infty}x_k = L$ and $\lim\limits_{k\rightarrow\infty}y_k = M$, then $\lim\limits_{k\rightarrow\infty}(x_k +y_k) = L+M$.
+\end{proposition}
+
+\begin{proof}
+Let $\epsilon>0$ be given.  We must prove there exists $N\in\N$ such that for all $n\geq N$,
+\begin{align*}
+\left\lvert (x_n + y_n) - (L + M)\right\rvert < \epsilon.
+\end{align*}
+Since $x_k$ converges to $L$, choose $N_1\in\N$ such that for all $n\geq N_1$, $\left\lvert x_n - L \right\rvert < \frac{\epsilon}{2}$.\\
+Since $y_k$ converges to $M$, choose $N_2\in\N$ such that for all $n\geq N_2$, $\left\lvert y_n - M \right\rvert < \frac{\epsilon}{2}$.\\
+Define $N=N_1+N_2\leq n$ such that
+\begin{align*}
+\left\lvert x_N - L \right\rvert < \frac{\epsilon}{2} \text{ and } \left\lvert y_N - M \right\rvert < \frac{\epsilon}{2}.
+\end{align*}
+Using the triangle inequality, we see that
+\begin{align*}
+\left\lvert (x_n + y_n) - (L + M)\right\rvert &= \left\lvert (x_n - L) + (y_n - M) \right\rvert\\
+&\leq \left\lvert x_n - L \right\rvert + \left\lvert y_n - M \right\rvert\\
+&\leq \left\lvert x_N - L \right\rvert + \left\lvert y_N - M \right\rvert\\
+&< \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+\end{align*}
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Assume $\lim\limits_{k\rightarrow\infty}x_k = L$ and $\lim\limits_{k\rightarrow\infty}y_k = M$.  Let $\epsilon>0$ be given.  We must prove there exists $N\in\N$ such that for all $n\geq N$,
+\begin{align*}
+\left\lvert (x_n + y_n) - (L + M)\right\rvert < \epsilon.
+\end{align*}
+Since $x_k$ converges to $L$, choose $N_1\in\N$ such that for all $n\geq N_1$, $\left\lvert x_n - L \right\rvert < \frac{\epsilon}{2}$.\\
+Since $y_k$ converges to $M$, choose $N_2\in\N$ such that for all $n\geq N_2$, $\left\lvert y_n - M \right\rvert < \frac{\epsilon}{2}$.\\
+Define $N=N_1+N_2$\footnote{removed $\leq n$ to be stated later} such that\footnote{Changed the $N$ to $n$.  I think I am understanding this a little better.}
+\begin{align*}
+\left\lvert x_n - L \right\rvert < \frac{\epsilon}{2} \text{ and } \left\lvert y_n - M \right\rvert < \frac{\epsilon}{2}.
+\end{align*}
+Let $n\geq N$.\footnote{Must state the relationship between $n$ and $N$ for the proof to work.}  Using the triangle inequality, we see that
+\begin{align*}
+\left\lvert (x_n + y_n) - (L + M)\right\rvert &= \left\lvert (x_n - L) + (y_n - M) \right\rvert\\
+&\leq \left\lvert x_n - L \right\rvert + \left\lvert y_n - M \right\rvert\\
+&< \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+\end{align*}
+\end{proof}
+
+\end{document}

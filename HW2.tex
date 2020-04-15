@@ -1,0 +1,31 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 2}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+The word FEAR morphs into the word HOPE.
+\end{proposition}
+
+\begin{proof}
+First, by using rule 2, the letters in the word FEAR can be scrambled to form the word FARE.  Following this, rule 1 can be used to change the letter F in FARE to H to form the word HARE.  Rule 1 can be used again to change the word HARE to HAVE by changing the letter R in HARE to V.  With yet another use of rule 1, the letter A in HAVE can be changed to O to form the new word HOVE.  Finally, we can use rule 1 once more to change the word HOVE to HOPE by changing the letter V in HOVE to P in HOPE.  In summary, we have proved that
+\begin{align*}
+\text{FEAR}&\stackrel{\text{Rule 2}}{\longrightarrow}\text{FARE}\\
+&\stackrel{\text{Rule 1}}{\longrightarrow}\text{HARE}\\
+&\stackrel{\text{Rule 1}}{\longrightarrow}\text{HAVE}\\
+&\stackrel{\text{Rule 1}}{\longrightarrow}\text{HOVE}\\
+&\stackrel{\text{Rule 1}}{\longrightarrow}\text{HOPE}.
+\end{align*}
+In conclusion, the word FEAR morphs into the word HOPE.
+\end{proof}
+
+\end{document}

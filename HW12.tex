@@ -1,0 +1,36 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 12}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+For all $k\in\N$, $k^3+5k$ is divisible by 6.
+\end{proposition}
+
+\begin{proof}
+Let $k\in\N$. We proceed by induction and must prove the base case and the induction step.  Using the base case, $k=1$, notice that $1^3+5\cdot1=6$ is divisible by $6$.  Continuing with the induction step, we assume $m^3+5m=6i$ for some $m\in\N$ and $i\in\Z$.  Observe that
+\begin{align*}
+(m+1)^3 + 5(m+1) &= m^3 + 3m^2 + 3m + 1 + 5m + 1\\
+&= (m^3 + 5m) + (3m^2 + 3m +6)\\
+&= 6i + (3m^2 + 3m + 6).
+\end{align*}
+To progress, we repeat induction for $3m^2 + 3m + 6$.  Using the base case $j=1$, it can be surmised that $3\cdot1^2 + 3\cdot1 + 6 = 12$ is divisible by $6$.  Moving to the induction step, we assume $3m^2 + 3m + 6 = 6j$ for some $m\in\N$ and $j\in\Z$.  We can now deduce that
+\begin{align*}
+3(m+1)^2 + 3(m+1) + 6 &= 3m^2+6m+3+3m+3\\
+&= (3m^2 + 3m +6) + 6m\\
+&= 6j + 6m.
+\end{align*}
+Substituting $6j + 6m$ back into $6i + (3m^2 + 3m + 6)$ yields us $6i + 6j + 6m$ which simplifies to $6(i+j+m)$, proving that for all $k\in\N$, $k^3+5k$ is divisible by 6.
+\end{proof}
+
+\end{document}

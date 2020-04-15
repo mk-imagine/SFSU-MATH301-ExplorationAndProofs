@@ -1,0 +1,37 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 34}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $x,y\in\R$ such that $x<y$. There exists $z\in\R$ such that $x<z<y$.
+\end{proposition}
+
+\begin{proof}
+Assume $x,y\in\R$ such that $x<y$.  Notice that applying Proposition 8.32(i) we can form the following statements:
+\begin{align*}
+x+x &<x+y\\
+x+y &<y+y,
+\end{align*}
+which yields $x+x<x+y<y+y$.  Observe that
+\begin{align*}
+2x &< x+y < 2y\\
+\frac{2x}{2} &< \frac{x+y}{2} < \frac{2y}{2}\\
+x &< \frac{x+y}{2} < y,
+\end{align*}
+which proves our proposition.
+\end{proof}
+\end{document}

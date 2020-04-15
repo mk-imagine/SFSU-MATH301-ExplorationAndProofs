@@ -1,0 +1,62 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 19}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $A,B,C$ be sets.
+\[
+A\times(B \cup C) = (A\times B)\cup(A\times C)
+\]
+\end{proposition}
+
+\begin{proof}
+Let $A,B,C$ be sets.  To prove our proposition, we need to show that
+\[
+A\times(B \cup C) \subseteq (A\times B)\cup(A\times C)
+\]
+and
+\[
+(A\times B)\cup(A\times C) \subseteq A\times(B \cup C).
+\]
+
+Let $x\in A\times(B \cup C)$, then $x=(y,z)$, where $y\in A$ and $z\in (B\cup C)$.  Evaluating $z$, it can be deduced that $z\in B$ or $z\in C$.  Since $y\in A$ for all cases, we can write the following:
+\[
+\begin{tabular}{c c c c c c c}
+$y\in A \text{ and } z\in B$ & \text{    } & & or & & \text{    } & $y\in A \text{ and } z\in C$.
+\end{tabular}
+\]
+This can be rewritten as $x\in A\times B$ or $x\in A\times C$. This proves that
+\[
+A\times(B \cup C) \subseteq (A\times B)\cup(A\times C).
+\]
+
+Conversely, if $x\in A \times B$ or $x\in A \times C$, where $x=(y,z)$, then
+\[
+\begin{tabular}{c c c c c c c}
+$y\in A \text{ and } z\in B$ & \text{    } & & or & & \text{    } & $y\in A \text{ and } z\in C$.
+\end{tabular}
+\]
+Because $y\in A$ in both cases and $z\in B$ or $z\in C$, we can now reason that $y\in A$ and $z\in (B\cup C)$.  Since $x\in A\times (B\cup C)$, we have proven
+\[
+(A\times B)\cup(A\times C) \subseteq A\times(B \cup C),
+\]
+which means
+\[
+A\times(B \cup C) = (A\times B)\cup(A\times C).
+\]
+\end{proof}
+
+\end{document}

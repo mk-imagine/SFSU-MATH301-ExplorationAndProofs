@@ -1,0 +1,40 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 21}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+The integer $m$ is odd if and only if there exists $q\in\Z$ such that $m=2q+1$.
+\end{proposition}
+
+\begin{proof}
+Assume $m$ is odd, which by definition means $m\neq 2q$.  Applying the Division Algorithm yields us $m=2q +r$ where $n=2$ and $0\leq r \leq n-1$.  Since $r\in\Z$ and $0\leq r\leq 1$, we are confronted with two cases, $r=1$ and $r=0$, where
+\[
+\begin{tabular}{ c c c c c }
+$m=2q+0$ & & and & & $m=2q+1$.
+\end{tabular}
+\]
+Since $m=2q+0$ produces a contradiction to our assumption, our second case $m=2q+1$ must be true.
+
+For the reverse direction, let us assume that $m=2q+1$.  Applying the Division Algorithm produces $m=2q + r$, where $n=2$ and $0\leq r \leq n-1$.  Once again, we have two cases, $r=1$ and $r=0$, where
+\[
+\begin{tabular}{ c c c c c }
+$m=2q+1$ & & and & & $m=2q+0$.
+\end{tabular}
+\]
+The first of our cases just reasserts our assumption, $m=2q+1$, so we must show that $m\neq2\tilde{q}$ for all $\tilde{q}$.  Towards a contradiction, let us assume that there exists a $\tilde{q}$ such that $m = 2\tilde{q} +0$.  Notice, however, that this means $m=2q +1=2\tilde{q} + 0$, which contradicts the requirement of uniqueness for the quotient and remainder of the Division Algorithm.  This proves that if there exists $q\in\Z$ such that $m=2q+1$, the integer $m$ is odd.
+\end{proof}
+
+\end{document}

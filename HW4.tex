@@ -1,0 +1,25 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 4}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $x\in\Z$. If $x$ has the property that there exists an integer $m$ such that $m+x=m$, then $x=0$.
+\end{proposition}
+
+\begin{proof}
+Let us assume for some $m\in\Z$, $m+x=m$ is true. We can add $-m$ to both sides of the equality as follows: \[ (-m)+(m+x)=(-m)+m. \] Next, using Axiom 1.1(ii) on the left side of the equation results in $((-m)+m)+x=(-m)+m$.  By applying Proposition 1.8 to $(-m)+m$ on both sides of the equation, we are left with $0+x=0$. We can now conclude that $x=0$ by using Proposition 1.7 on the left side of the equation to eliminate the $0$ in $0+x$.  Thus, we have proven that if $x$ has the property that there exists an integer $m$ such that $m+x=m$, then $x=0$.
+\end{proof}
+
+
+
+\end{document}

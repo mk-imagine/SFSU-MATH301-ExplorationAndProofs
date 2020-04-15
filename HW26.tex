@@ -1,0 +1,34 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 26}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If there exists an injection $f\colon A\rightarrow B$, then there exists a surjection $g\colon B\rightarrow A$.
+\end{proposition}
+
+\begin{proof}
+Assume injection $f\colon A\rightarrow B$ such that $a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$.  Fix an $a_0\in A$ and define a function $g\colon B \Rightarrow A$ by
+\begin{align*}
+g(b) =
+\begin{cases}
+a\in A\hspace{0.5cm}&\text{if $b$ is in the image of $f$ and $b = f(a)$}\\
+a_0\in A&\text{if $b\neq f(a)$.}
+\end{cases}
+\end{align*}
+Since $g$ is a well-defined function because $f$ is injective, and we have defined $g$ such that $g\circ f= \text{id}_A$, we can say that for all $a\in A$ there exists $b\in B$ such that $g(b)=a$, proving our proposition.
+\end{proof}
+
+\end{document}

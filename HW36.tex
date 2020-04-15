@@ -1,0 +1,52 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 36}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $x\in\R_{\geq 0}$ and $k\in\Z_{\geq 0}$.  Then
+\begin{align*}
+(1+x)^k \geq 1+kx.
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+Let $x\in\R_{\geq 0}$ and $k\in\Z_{\geq 0}$, and proceed by induction on $k$.
+
+For our base case, $k=0$,
+\begin{align*}
+(1+x)^0 &\geq 1 + 0\cdot x\\
+1&\geq 1,
+\end{align*}
+which is certainly true.
+
+Proceeding to the induction step, let us assume that for some $p\in\Z_{>0}$, $(1+x)^p \geq 1 +px$.  We need to show that
+\begin{align*}
+(1+x)^{p+1} \geq 1 + (p+1)x.
+\end{align*}
+Notice that
+\begin{align*}
+(1+x)^{p+1} = (1+x)^p (1+x) &\geq (1+px)(1+x)\\
+&\geq 1+px+x+px^2\\
+&\geq 1+(p+1)x +px^2.
+\end{align*}
+Since $p$ is positive and $x^2$ is always positive, we can can state
+\begin{align*}
+(1+x)^{p+1} &\geq 1+(p+1)x +px^2 \geq 1 + (p+1)x,
+\end{align*}
+proving our proposition.
+\end{proof}
+\end{document}

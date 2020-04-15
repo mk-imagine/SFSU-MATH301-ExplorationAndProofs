@@ -1,0 +1,33 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 28}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If a function is bijective then its inverse is unique.
+\end{proposition}
+
+\begin{proof}
+Assume $f\colon A\rightarrow B$ is bijective.  Define $g_1\colon B\rightarrow A$ and $g_2\colon B\rightarrow A$ as $f(a)=b$ and $g(b)=a$ with $a\in A$ and $b\in B$.  By definition, $g_1\circ f = \text{ id}_A = g_2\circ f$ and $f\circ g_1 = \text{ id}_B = f\circ g_2$.  Therefore $g_1 = g_2$ and the inverse of $f$ must be unique.
+\end{proof}
+
+\section{Revision}
+
+\begin{proof}
+Assume $f\colon A\rightarrow B$ defined by $f(a)=b$ is bijective with $a\in A$ and $b\in B$.\footnote{Some wording was cleaned up and reorganized}  Define two inverses of $f$ as $g_1\colon B\rightarrow A$ and $g_2\colon B\rightarrow A$ as $g_1(b)=a$ and $g_2(b)=a$.\footnote{Instead of using abstract ideas, I defined the functions}  By definition, $g_1\circ f(a) = g_2\circ f(a) = a$ which means the left inverses are identical for any $a\in A$.  Similarly, $f\circ g_1(b) = f\circ g_2(b) = b$, which means the right inverses are identical for any $b\in B$.  Since the left inverses are indentical and right inverses are identical, the inverse of $f$ must be unique.\footnote{I think this conclusion clears up any ambiguity}
+\end{proof}
+
+
+\end{document}

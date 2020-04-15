@@ -1,0 +1,25 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 17}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+The empty set is a subset of every set, that is, for every set $S$, $\varnothing \subseteq S$.
+\end{proposition}
+
+\begin{proof}
+Towards a contradiction, assume that for every set $S$, $\varnothing \nsubseteq S$.  This means there is some $x\in \varnothing$ such that $x \notin S$.  This reveals a contradiction since there is no $x\in \varnothing$, proving our proposition that the empty set is a subset of every set.
+\end{proof}
+
+\end{document}

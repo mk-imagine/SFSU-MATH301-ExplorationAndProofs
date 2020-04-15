@@ -1,0 +1,34 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 29}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+``Having the same cardinality'' is an equivalence relation on the collection of all sets.
+\end{proposition}
+
+\begin{proof}
+Assume set $A$ has the same cardinality as set $B$, which, by definition, means there is a bijection $f\colon A\rightarrow B$.  To prove that having the same cardinality is an equivalence relation, we must prove reflexivity, symmetry, and transitivity.
+
+To prove reflexivity, we define a bijection $f\colon A\rightarrow A$ such that $f(a)=a$, which proves set $A$ has the same cardinality as $A$.
+
+Next, we define a bijection $f\colon A\rightarrow B$.  Using Proposition 9.10(iii) allows us to assert that $f$ has an inverse which we can define as $g\colon B\rightarrow A$.  By definition, because $g$ is the inverse of $f$, it is also bijective, which proves symmetry.
+
+To prove transitivity, define a bijection $f\colon A\rightarrow B$ and bijection $g\colon B\rightarrow C$, such that $f(a) = b$ and $g(b) = c$.  Using Proposition 9.7(iii),  we can assert that the composition $g(f(a)) = c$ is also bijective.
+
+Therefore ``Having the same cardinality'' is an equivalence relation on the collection of all sets.
+\end{proof}
+
+\end{document}

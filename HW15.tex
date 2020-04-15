@@ -1,0 +1,48 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 15}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $k\in\N$.
+\[
+\sum_{j=1}^{k}j^2 = \frac{k(k+1)(2k+1)}{6}.
+\]
+\end{proposition}
+
+\begin{proof}
+We proceed by induction. Using the base case, $k=1$, notice that
+\[
+\sum_{j=1}^{1}1^2 = \frac{1(1+1)(2\cdot 1+1)}{6} = \frac{6}{6} = 1.
+\]
+Continuing with the induction step we assume
+\[
+\sum_{j=1}^{n}j^2 = \frac{n(n+1)(2n+1)}{6}
+\]
+for some $k\in\N$.  Through the definition of summation, we can write
+\[
+\sum_{j=1}^{n + 1}j^2 = \left(\sum_{j=1}^{n}j^2\right) + (n+1)^2.
+\]
+We can now observe the following:
+\begin{align*}
+&= \frac{n(n+1)(2n+1)}{6} + (n+1)^2\\
+&= \frac{n(n+1)(2n+1) + 6(n+1)^2}{6}\\
+&= \frac{(n+1)(n(2n+1) + 6(n+1))}{6}\\
+&= \frac{(n+1)(2n^2 + 7n + 6)}{6}\\
+&= \frac{(n+1)(n + 2)(2n + 3)}{6}\\
+&= \frac{(n+1)((n + 1) + 1)(2(n + 1) + 1)}{6}.
+\end{align*}
+This completes our induction step, proving the proposition.
+\end{proof}
+
+\end{document}

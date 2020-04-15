@@ -1,0 +1,30 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 27}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Suppose $f\colon A\rightarrow B$ and $g\colon B\rightarrow C$ are functions.  If $g\circ f$ is surjective, then $g$ is surjective.
+\end{proposition}
+
+\begin{proof}
+Assume $f\colon A\rightarrow B$ and $g\colon B\rightarrow C$ are functions, where $g\circ f$ is surjective.  This means that for $g\circ f$, for each $c\in C$, there exists an $a\in A$ such that $g(f(a))=c$.
+
+To prove that $g$ is surjective, we need to prove that for all $c\in C$ there exists $b\in B$ such that $g(b)=c$.
+
+Let $c\in C$ and define $f$ as $f(a)=b$.  Since we assume that there exists $a\in A$ such that $g(f(a))=c$, there must be a $b\in B$ such that $g(f(a))=g(b)=c$.
+\end{proof}
+
+\end{document}

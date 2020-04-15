@@ -1,0 +1,38 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 30}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $m>n$ then a function $[m]\rightarrow [n]$ cannot be injective.
+\end{proposition}
+
+\begin{proof}
+Assume $m,n\in\N$ and $m>n$. We prove the proposition by proceeding with induction on $n$.
+
+For the base case, $n=1$, $m>1$, and $[m]\rightarrow [1]$.  The single element in $[1]$ is an image of every element in $[m]$, and since $m>1$, the function $[m]\rightarrow [1]$ is certainly not injective.
+
+For the induction step, let $n\geq 2$ and assume that $P(n-1)$ is not injective.  Towards a contradiction, suppose there exists an injection for $P(n)$.  This means that there exists an injection $[m]\rightarrow[n]$.  Since there is an injection $[m]\rightarrow[n]$, we can say that if we remove an element from $[m]$ and its unique image $f(m)$ from $[n]$, we maintain an injection
+\[
+[m-1]\rightarrow[n]-\{f(m)\}.
+\]
+By applying Proposition 13.3, we can assert that the function
+\[
+[n]-\{f(m)\}\rightarrow[n-1]
+\]
+is bijective.  Proposition 9.7 states that since $[m-1]\rightarrow[n]-\{f(m)\}$ is injective and $[n]-\{f(m)\}\rightarrow[n-1]$ is bijective, $[m-1]\rightarrow[n-1]$ is injective, which contradicts our induction hypothesis that $P(n-1)$ is not injective.
+\end{proof}
+
+\end{document}

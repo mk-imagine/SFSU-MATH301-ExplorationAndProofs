@@ -1,0 +1,32 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 3}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $m$, $n$, $p$, and $q$ are integers, then $(m(n+p))q = (mn)q + m(pq)$.
+\end{proposition}
+
+\begin{proof}
+Let $m,n,p,q\in\Z$. By Axiom 1.1(iii), we can distribute the $m$ in $m(n+p)$ within the equation $(m(n+p))q$ to form the expression $(mn+mp)q$. 
+Similarly, by applying Proposition 1.6, we can distribute $q$ in $(mn+mp)q$, which results in $(mn)q+(mp)q$.  The final step requires us to use Axiom 1.1(v) to relocate the parentheses in $(mp)q$ to form $m(pq)$, which shows that $(mn)q+(mp)q$ can be expressed as $(mn)q + m(pq)$.  In summary we have proved that
+\begin{align*}
+(m(n+p))q&\stackrel{\text{Ax 1.1(iii)}}{=}(mn+mp)q\\
+&\stackrel{\text{Prop 1.6}}{=}(mn)q+(mp)q\\
+&\stackrel{\text{Ax 1.1(v)}}{=}(mn)q+m(pq).
+\end{align*}
+In conclusion, $(m(n+p))q = (mn)q + m(pq)$.
+\end{proof}
+
+
+
+\end{document}

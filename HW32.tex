@@ -1,0 +1,70 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 32}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+The function $f\colon \N\rightarrow\Z$ defined by
+\begin{align*}
+f(n) =
+\begin{cases}
+\frac{1-n}{2},\text{\hspace{.1cm}when $n$ is odd}\\
+\frac{n}{2},\text{\hspace{.5cm}when $n$ is even}
+\end{cases}
+\end{align*}
+is bijective.
+\end{proposition}
+
+\begin{proof}
+Assume $f\colon \N\rightarrow\Z$ defined by
+\begin{align*}
+f(n) =
+\begin{cases}
+\frac{1-n}{2},\text{\hspace{.1cm}when $n$ is odd}\\
+\frac{n}{2},\text{\hspace{.5cm}when $n$ is even}
+\end{cases}
+\end{align*}
+is bijective.
+
+Define $g\colon\Z\rightarrow\N$ as
+\begin{align*}
+g(m) =
+\begin{cases}
+1-2m,\text{\hspace{.1cm}}m\leq0\\
+2m,\text{\hspace{.5cm}}m>0.
+\end{cases}
+\end{align*}
+
+First we need to examine the left inverse, which we need to further break up into odd and even cases.  Notice that when n is odd,
+\begin{align*}
+g(f(n)) = g\left(\frac{1-n}{2}\right) = 1-2\left(\frac{1-n}{2}\right) = n.
+\end{align*}
+Similarly, when n is even,
+\begin{align*}
+g(f(n)) = g\left(\frac{n}{2}\right) = 2\left(\frac{n}{2}\right) = n.
+\end{align*}
+
+We can examine the right inverse in a similar manner by looking at cases where $m\leq0$ and $m>0$.  Consider that when $m\leq0$,
+\begin{align*}
+f(g(m)) = f\left(1-2m\right) = \frac{1-(1-2m)}{2} = m.
+\end{align*}
+When $m>0$,
+\begin{align*}
+f(g(m)) = f\left(2m\right) = 2\left(\frac{n}{2}\right) = m.
+\end{align*}
+
+Note that it is never the case where $n$ is odd and $m>0$.  Furthermore, it is also never the case where $n$ is even and $m\leq0$.  Since $g$ is the left and right inverse of $f$, $f$ is bijective.
+\end{proof}
+\end{document}

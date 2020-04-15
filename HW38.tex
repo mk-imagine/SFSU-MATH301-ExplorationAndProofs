@@ -1,0 +1,41 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 38}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+$\lim\limits_{k \to \infty} \frac{k-1}{k}=1$.
+\end{proposition}
+
+\begin{proof}
+Let $\epsilon > 0$ be given.  We must find an $N\in\N$ such that for all $n\geq N$,
+\begin{align*}
+\left\lvert\frac{n-1}{n}-1\right\rvert < \epsilon.
+\end{align*}
+
+By Proposition 10.4, choose $N\in\N$ such that
+\begin{align*}
+\frac{1}{N} < \epsilon.
+\end{align*}
+
+Let $n\geq N$ then,
+\begin{align*}
+\left\lvert\frac{n-1}{n}-1\right\rvert &= \left\lvert\frac{n-1-n}{n}\right\rvert\\
+&= \left\lvert -\frac{1}{n}\right\rvert\\
+&= \frac{1}{n} \leq \frac{1}{N} < \epsilon.
+\end{align*}
+\end{proof}
+\end{document}

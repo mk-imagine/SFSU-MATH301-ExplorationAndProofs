@@ -1,0 +1,111 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 22}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $a\equiv a'$ (mod $n$) and $b\equiv b'$ (mod $n$) then
+\[
+\begin{tabular}{ c c c c c }
+$a+b\equiv a' + b'$  (mod $n$) & \hspace{0.75cm} & and & \hspace{0.75cm} & $ab \equiv a'b'$  (mod $n$).
+\end{tabular}
+\]
+\end{proposition}
+
+\begin{proof}
+We need to check if our proposition satisfies reflexivity, symmetry, and reflexivity.  $(a+b)\equiv (a+b)$ means $n$ divides $(a+b) - (a+b) = 0$, and $ab\equiv ab$ means $n$ divides $ab-ab=0$; both statements are true.
+
+Next we assume $a\equiv a'$ (mod $n$) and $b\equiv b'$ (mod $n$).  This can be expressed as follows:
+\[
+\begin{tabular}{ c c c c c }
+$n|(a-a')$ & \hspace{1cm} &  & \hspace{1cm} & $n|(b-b')$\\
+$a-a' = in$ & \hspace{1cm} & & \hspace{1cm} & $b-b' = jn$\\
+$a = in + a'$ & \hspace{1cm} &  & \hspace{1cm} & $b = jn + b'$.
+\end{tabular}
+\]
+Notice that
+\begin{align*}
+a+b &= (in +a') + (jn + b')\\
+a+b &= (in + jn) + (a' + b')\\
+(a+b) - (a' + b') &= (i+j)n,
+\end{align*}
+which means $a+b\equiv a' + b'$.
+But then $(a'+b') - (a + b) = -(i+j)n$ is also divisible by $n$, so $a'+b' \equiv a+b$.
+
+Assume $a+b\equiv a' + b'$ and $a' + b' \equiv c+d$ which means that there exists integers $\tilde{i}$ and $\tilde{j}$ such that
+\[
+\begin{tabular}{ c c c c c }
+$(a+b) - (a'-b') = \tilde{i}n$ & \hspace{1cm} & and & \hspace{1cm} & $(a'+b') - (c-d) = \tilde{j}n$.
+\end{tabular}
+\]
+Because of this
+\[
+(a+b)-(c+d) = ((a+b) - (a' + b')) + ((a' + b')-(c+d)) = \tilde{i}n + \tilde{j}n = (\tilde{i} + \tilde{j})n
+\]
+which means $(a+b) \equiv (c+d)$.
+
+Similarly, we can observe that
+\begin{align*}
+ab &= a(jn + b')\\
+ab &= ajn + ab'\\
+ab &= (in + a')jn + (in + a')b'\\
+ab &= injn + a'jn + b'in + a'b'\\
+ab - a'b' &= (ijn + a'j + b'i)n,
+\end{align*}
+which means $ab\equiv a'b'$.
+But then $a'b' - ab = -(ijn + a'j + b'i)n$ is also divisible by $n$, so $a'b'\equiv ab$.
+
+Assume $ab\equiv a'b'$ and $a'b'\equiv cd$ which means that there exists integers $\tilde{i}$ and $\tilde{j}$ such that
+\[
+\begin{tabular}{ c c c c c }
+$(ab) - (a'b') = \tilde{i}n$ & \hspace{1cm} & and & \hspace{1cm} & $(a'b') - (cd) = \tilde{j}n$.
+\end{tabular}
+\]
+Again, we can deduce that
+\[
+ab - cd = (ab-a'b') + (a'b' - cd) = \tilde{i}n + \tilde{j}n = (\tilde{i} + \tilde{j})n
+\]
+which means $ab \equiv cd$.
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Assume $a\equiv a'$ (mod $n$) and $b\equiv b'$ (mod $n$).  This can be expressed as follows:
+\begin{align*}
+n&|(a-a')\\
+a-a'&=in\\
+a&=in+a',
+\end{align*}
+and by following the same procedure, we can also write $b=jn+b'$ with $i,n\in\Z$.  Notice that
+\begin{align*}
+a+b &= (in +a') + (jn + b')\\
+a+b &= (in + jn) + (a' + b')\\
+(a+b) - (a' + b') &= (i+j)n,
+\end{align*}
+which means $a+b\equiv a' + b'$.
+
+Similarly, we can observe that
+\begin{align*}
+ab &= a(jn + b')\\
+ab &= ajn + ab'\\
+ab &= (in + a')jn + (in + a')b'\\
+ab &= injn + a'jn + b'in + a'b'\\
+ab - a'b' &= (ijn + a'j + b'i)n,
+\end{align*}
+which means $ab\equiv a'b'$.
+\end{proof}
+
+\end{document}

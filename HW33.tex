@@ -1,0 +1,56 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 33}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+$x\in\R_{>0}$ if and only if $\frac{1}{x}\in\R_{>0}$.
+\end{proposition}
+
+\begin{proof}
+Assume $x\in\R_{>0}$.  Using Axiom 8.26(iv), we must consider three cases: $\frac{1}{x}\in\R_{>0}$, $\frac{1}{x}=0$, and $-\frac{1}{x}\in\R_{>0}$.  Observe that $\frac{1}{x}=0$ is never true for any $x\in\R$, which leaves us the remaining two cases.  Towards a contradiction, let us assume that $-\frac{1}{x}\in\R_{>0}$.  If we let $-\frac{1}{x} = a$ for some $a\in\R_{>0}$, then
+\begin{align*}
+-a &= \frac{1}{x}\in\R_{>0},
+\end{align*}
+which contradicts our assumption.  This means that our last case, $\frac{1}{x}\in\R_{>0}$ must be true.
+
+For the opposite direction, we assume $\frac{1}{x}\in\R_{>0}$.  Using Axiom 8.26(iv), we consider the cases: $x\in\R_{>0}$, $x=0$, and $-x\in\R_{>0}$.  For all $\frac{1}{x}\in\R_{>0}$, it is never the case that $x=0$.  Towards a contradiction, assume that $-x\in\R_{>0}$.  Let $-x = b$ for some $\frac{1}{b}\in\R_{>0}$.  Then
+\begin{align*}
+-\frac{1}{b} &= x\in\R_{>0},
+\end{align*}
+but $-x\in\R_{>0}$.  Therefore, by Axiom 8.26(iv), the last case is true and $x\in\R_{>0}$, proving our proposition.
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Assume $x\in\R_{>0}$.  Using Axiom 8.26(iv), we must consider three cases: $\frac{1}{x}\in\R_{>0}$, $\frac{1}{x}=0$, and $-\frac{1}{x}\in\R_{>0}$.  By Axiom 8.5, observe that
+\begin{align*}
+x\cdot x^{-1} &= 1 \neq 0,
+\end{align*}
+which, by referencing Proposition 8.15, means that $\frac{1}{x} \neq 0$, leaving us the remaining two cases.\footnote{In the previous version, I did not justify why $x^{-1} \neq 0$.  Here I referenced Axiom 8.5 and Proposition 8.15.  I was under the impression that we had to only use Axiom 8.26 and did not have time to revise before submitting.}  Towards a contradiction, let us assume that $-\frac{1}{x}\in\R_{>0}$.  If we let $-\frac{1}{x} = a$ for some $a\in\R_{>0}$, then
+\begin{align*}
+-a &= \frac{1}{x}\in\R_{>0},
+\end{align*}
+but $-\frac{1}{x}\in\R_{>0}$.\footnote{I inserted the contradiction I was referring to earlier here.}  This means that our last case, $\frac{1}{x}\in\R_{>0}$ must be true.
+
+For the opposite direction, we assume $\frac{1}{x}\in\R_{>0}$.  Using Axiom 8.26(iv), we consider the cases: $x\in\R_{>0}$, $x=0$, and $-x\in\R_{>0}$.  For all $\frac{1}{x}\in\R_{>0}$, Axiom 8.5 allows us to state that it is never the case that $x=0$.  Towards a contradiction, assume that $-x\in\R_{>0}$.  Let $-x = b$ for some $\frac{1}{b}\in\R_{>0}$.  Then
+\begin{align*}
+-\frac{1}{b} &= x\in\R_{>0},
+\end{align*}
+but $-x\in\R_{>0}$.  Therefore, by Axiom 8.26(iv), the last case is true and $x\in\R_{>0}$, proving our proposition.
+\end{proof}
+\end{document}

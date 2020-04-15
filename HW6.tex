@@ -1,0 +1,56 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 6}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+For all $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$.
+\end{proposition}
+
+\begin{proof}
+Our proposition gives us that all $m\in\Z$.  To prove this, let us assume that there is some $m\in\Z$.  With this hypothesis given to us, we can use Axiom 1.2 to form the equation $m+0=m$.  Next, through the properties of replacement, we can set $m=0$ and express the equation as $0+0=0$.  Furthermore, multiplying both sides of $0+0=0$ by $m$ yields $(0+0)m=0m$.  By using Proposition 1.6 on the left side of $(0+0)m=0m$, we can form $0m+0m=0m$.  From this, we are allowed to add $-(0m)$ to both sides of the statement to formulate $-(0m)+((0m)+(0m))=-(0m)+(0m)$.  We can now use Axiom 1.1(ii) on the left side of the equation, which results in the expression $(-(0m)+(0m))+(0m)=-(0m)+(0m)$.  Applying Proposition 1.8 to both sides of this equation produces $0+(0m)=0$.  Proposition 1.7 and Axiom 1.1(iv) then allows us to form $0\cdot m=0$ and $m\cdot 0=0$ respectively.  Because of the properties of transitivity and replacement, we can now conclude that for some $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$.  If we consider all $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$ must also be true since $m\cdot 0 = 0 = 0\cdot m$ is true for some $m\in\Z$. In summary, we have proven that for all $m\in\Z$
+\begin{align*}
+m+0&=m&\text{Ax 1.2}\\
+0+0&=0&\text{Ax 1.2}\\
+(0+0)m&=0m\\
+(0m)+(0m)&=(0m)&\text{Prop 1.6}\\
+-(0m)+((0m)+(0m))&=-(0m)+(0m)\\
+(-(0m)+(0m))+(0m)&=-(0m)+(0m)&\text{Ax 1.1(ii)}\\
+0+(0m)&=0&\text{Prop 1.8}\\
+0\cdot m&=0&\text{Prot 1.7}\\
+m\cdot 0&=0&\text{Ax 1.1(iv)}\\
+m\cdot 0 &= 0 = 0\cdot m.
+\end{align*}
+In conclusion, for all $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$.
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Let all $m\in\Z$.  We begin by using Axiom 1.2 to form the equation $n+0=n$\footnote{In the original, I used $m$ throughout the proof, to fix this I replaced the $m$ here to $n$ to assert that $n$ is not $m$.} and replace $n$ with $0$ to form $0+0=0$.\footnote{I cleaned up the language here, making for a much more clear and concise statement in comparison to the original.}  Furthermore, multiplying both sides of $0+0=0$ by $m$ yields $(0+0)m=0m$.  By using Proposition 1.6 on the left side of $(0+0)m=0m$, we can form $0m+0m=0m$.  From this, we are allowed to add $-(0m)$ to both sides of the statement to formulate $-(0m)+((0m)+(0m))=-(0m)+(0m)$.  We can now use Axiom 1.1(ii) on the left side of the equation, which results in the expression $(-(0m)+(0m))+(0m)=-(0m)+(0m)$.  Applying Proposition 1.8 to both sides of this equation produces $0+(0m)=0$.  Proposition 1.7 and Axiom 1.1(iv) then allows us to form $0\cdot m=0$ and $m\cdot 0=0$ respectively.  Because of the properties of transitivity and replacement, we can now conclude that for all $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$.\footnote{The transition from ``for some'' to ``for all'' was removed since ``for all'' is assumed in the hypothesis.}
+\begin{align*}
+n+0&=n&\text{Ax 1.2}\\
+0+0&=0&\text{Ax 1.2}\\
+(0+0)m&=0m\\
+(0m)+(0m)&=(0m)&\text{Prop 1.6}\\
+-(0m)+((0m)+(0m))&=-(0m)+(0m)\\
+(-(0m)+(0m))+(0m)&=-(0m)+(0m)&\text{Ax 1.1(ii)}\\
+0+(0m)&=0&\text{Prop 1.8}\\
+0\cdot m&=0&\text{Prot 1.7}\\
+m\cdot 0&=0&\text{Ax 1.1(iv)}\\
+m\cdot 0 &= 0 = 0\cdot m.
+\end{align*}
+In conclusion, for all $m\in\Z$, $m\cdot 0 = 0 = 0\cdot m$.
+\end{proof}
+
+
+\end{document}

@@ -1,0 +1,101 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 31}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+The function $f\colon \N\rightarrow\Z$ defined by
+\begin{align*}
+f(n) =
+\begin{cases}
+\frac{1-n}{2},\text{\hspace{.1cm}when $n$ is odd}\\
+\frac{n}{2},\text{\hspace{.5cm}when $n$ is even}
+\end{cases}
+\end{align*}
+is bijective.
+\end{proposition}
+
+\begin{proof}
+To prove this proposition, we must prove that the function $f\colon \N\rightarrow\Z$ defined by
+\begin{align*}
+f(n) =
+\begin{cases}
+\frac{1-n}{2},\text{\hspace{.1cm}when $n$ is odd}\\
+\frac{n}{2},\text{\hspace{.5cm}when $n$ is even}
+\end{cases}
+\end{align*}
+is both injective and surjective.
+
+Let us begin by considering the contrapositive of the definition of injection $f(n_1)=f(n_2)\Rightarrow n_1=n_2$.  We have two cases to consider: when $n$ is odd and when $n$ is even.  Observe that when $n$ is odd
+\begin{align*}
+f(n_1) &= f(n_2)\\
+\frac{1-n_1}{2} &= \frac{1-n_2}{2}\\
+n_1 &= n_2.
+\end{align*}
+Similarly, when $n$ is even
+\begin{align*}
+f(n_1) &= f(n_2)\\
+\frac{n_1}{2} &= \frac{n_2}{2}\\
+n_1 &= n_2.
+\end{align*}
+
+I have no idea how to proceed with surjection.  I thought I would proceed by induction, but hit some brick walls.  I've tried just cooking up the inverse to the function, but I had no idea how to justify that.  So I'm at a complete loss here.
+\end{proof}
+
+\section{Revision}
+
+\begin{proof}
+To prove this proposition, we must prove that the function $f\colon \N\rightarrow\Z$ defined by
+\begin{align*}
+f(n) =
+\begin{cases}
+\frac{1-n}{2},\text{\hspace{.1cm}when $n$ is odd}\\
+\frac{n}{2},\text{\hspace{.5cm}when $n$ is even}
+\end{cases}
+\end{align*}
+is both injective and surjective.
+
+We have three cases to consider when examining injectiveness: when $n_1$ is odd and $n_2$ is even, when both are even, and when both are odd.  Let us begin by considering the contrapositive of the definition of injection $f(n_1)=f(n_2)\Rightarrow n_1=n_2$.  Observe that when $n$ is odd
+\begin{align*}
+f(n_1) &= f(n_2)\\
+\frac{1-n_1}{2} &= \frac{1-n_2}{2}\\
+n_1 &= n_2.
+\end{align*}
+Similarly, when $n$ is even
+\begin{align*}
+f(n_1) &= f(n_2)\\
+\frac{n_1}{2} &= \frac{n_2}{2}\\
+n_1 &= n_2.
+\end{align*}
+
+Towards a contradiction, consider the case where $n_1$ is odd and $n_2$ is even and assume that $n_1 = n_2$.  Then 
+\begin{align*}
+f(n_1) &= f(n_2)\\
+\frac{1-n_1}{2} &= \frac{n_2}{2}\\
+1-n_1 &= n_2.
+\end{align*}
+Which means for any $n_1\in\N$, $n_2\notin \N$, but $n_2\in\N$.  Therefore it is never the case that $n_1$ is odd and $n_2$ is even.\footnote{Added this for completeness, since this should not be assumed.}
+
+For surjectivity, let $m\in\Z$.  When $m\leq0$, $1-2m=n\in\N$, so
+\begin{align*}
+f(n) &= \frac{1-(1-2m)}{2}= \frac{2m}{2}=m.
+\end{align*}
+When $m>0$, $2m=n\in\N$, so
+\begin{align*}
+f(n) &= \frac{2m}{2} = m.
+\end{align*}
+Therefore for every $m\in\Z$ there exists $n\in\N$ such that $f(n)=m$.\footnote{Added surjection proof because I had no idea how to do it previously}
+\end{proof}
+\end{document}

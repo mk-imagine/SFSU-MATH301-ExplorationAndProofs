@@ -1,0 +1,24 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 10}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $m,n,p,q\in\Z$.  If $m<n$ and $p<q$ then $m+p<n+q$.
+\end{proposition}
+
+\begin{proof}
+Assume $m,n,p,q\in\Z$ and $m<n$ and $p<q$, which by definition is $n-m\in\N$ and $q-p\in\N$.  Axiom 2.1(i) allows us to write $(n-m)+(q-p)\in\N$, which we can rewrite as $(n+q)-(m+p)\in\N$.  Thus, $m+p<n+q$.
+\end{proof}
+
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 23}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $n=ab$ for some $a,b\in \N_{\geq2}$, then $\Z_n$ does not satisfy Axiom 1.5.
+\end{proposition}
+
+\begin{proof}
+Assume $n=ab$ for some $a,b\in \N_{\geq2}$.  It can be surmised that
+\[
+\begin{tabular}{ c c c c c }
+$[a] \odot [b] = [n]$ & \hspace{1cm} & and & \hspace{1cm} & $[a] \odot [n] = [n]$,\\
+\end{tabular}
+\]
+which can be followed by
+\begin{align*}
+[a] \odot [b] &= [a] \odot [n]\\
+[b] &= [n].
+\end{align*}
+Notice, however, that $a>1$, $ab > b$ and $n > b > 1$, which, through the property of distinctness in Proposition 6.24(ii), means $[b] \neq [n]$.  Similarly, because of the symmetry of $ab$, $[a] \neq [n]$, which proves that Axiom 1.5 is not satisfied.
+\end{proof}
+
+\section{Revision}
+
+\begin{proof}
+Towards a contradiction\footnote{I did not make it clear that I was using contradiction to prove the proposition}, assume $n=ab$ for some $a,b\in \N_{\geq2}$ and $[a],[b],[0]\in\Z_n$\footnote{Also, I used $[n]$ to illustrate the equivalence class of $[0]$, but changed it to $[0]$ to give the proof more clarity}.  It can be surmised that
+\[
+\begin{tabular}{ c c c c c }
+$[a] \odot [b] = [0]$ & \hspace{1cm} & and & \hspace{1cm} & $[a] \odot [0] = [0]$,\\
+\end{tabular}
+\]
+which can be followed by
+\begin{align*}
+[a] \odot [b] &= [a] \odot [0]\\
+[b] = &[0] = [n].
+\end{align*}
+Notice, however, that $a>1$, $ab > b$ and $n > b > 1$, which, through the property of distinctness in Proposition 6.24(ii), means $[b] \neq [n]$.  Similarly, because of the symmetry of $ab$, $[a] \neq [n]$, which proves that Axiom 1.5 is not satisfied.
+\end{proof}
+
+\end{document}

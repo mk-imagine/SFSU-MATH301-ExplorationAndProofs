@@ -1,0 +1,33 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 18}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $A,B\subseteq X$.
+\begin{equation*}
+\begin{tabular}{ c c c c c }
+$A \subseteq B$ & & if and only if & & $B\complement \subseteq A\complement$\\
+\end{tabular}
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+Assume $x\in A \Rightarrow x\in B$. Then, by contraposition, $x\notin B \Rightarrow x\notin A$.  Therefore $x\in B\complement \Rightarrow x\in A\complement$, which can be rewritten as $B\complement \subseteq A\complement$.
+
+Similarly, to prove the other direction, we assume $x\in B\complement \Rightarrow x\in A\complement$.  The contrapositive, $x\notin A\complement \Rightarrow x\notin B\complement$, can be used to write $x\in A \Rightarrow x\in B$, which can be followed by $A\subseteq B$, proving our proposition.
+\end{proof}
+
+\end{document}

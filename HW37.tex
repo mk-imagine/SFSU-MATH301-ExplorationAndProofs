@@ -1,0 +1,34 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 37}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $x,y\in\R$.  Then $x=y$ if and only if for every $\epsilon > 0$ we have $\lvert x-y\rvert < \epsilon$.
+\end{proposition}
+
+\begin{proof}
+Let $x,y\in\R$ and $x=y$.  By Proposition 10.10(i), $\lvert x-y\rvert = 0$, which means that  $\lvert x-y\rvert = 0 < \epsilon$ for all $\epsilon > 0$.
+
+Considering the opposite direction, to produce a contradiction, let us assume that $\lvert x-y\rvert < \epsilon$ for all $\epsilon > 0$  such that $x\neq y$.  By definition, $\lvert x-y\rvert \geq 0$, but applying Proposition 10.10(i) allows us to write $\lvert x-y\rvert > 0$.
+
+Let $\epsilon = \frac{1}{2}\lvert x-y\rvert$, which allows us to maintain that $\epsilon > 0$.  But this means that
+\begin{align*}
+\lvert x-y\rvert > \epsilon = \frac{1}{2}\lvert x-y\rvert,
+\end{align*}
+producing a contradiction which proves our proposition.
+\end{proof}
+\end{document}

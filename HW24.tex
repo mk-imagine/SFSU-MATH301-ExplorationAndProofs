@@ -1,0 +1,37 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 24}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Define a relation on $\Z \times (\Z - \{0\})$ by $(a,b) \tilde (c,d)$ if $ad = bc$. Define multiplication on equivalence classes by
+\[
+[(a,b)]\cdot[(c,d)] = [(ac,bd)].
+\]
+Prove that this multiplication operation is well-defined.
+\end{proposition}
+
+\begin{proof}
+To prove that this multiplication operation is well-defined, we must illustrate that the operation works regardless of which elements we choose from their corresponding equivalence classes.  To begin, let us assume $[(a,b)] = [(a',b')]$ and $[(c,d)] = [(c',d')]$.  Notice that
+\begin{align*}
+ab' &= a'b\\
+cd' &= c'd\\
+(ab')(cd') &= (a'b)(c'd)\\
+(ac)(b'd') &= (a'c')(bd),
+\end{align*}
+which results in $[(ac,bd)] = [(a'c', b'd')]$, proving our proposition.
+\end{proof}
+
+\end{document}

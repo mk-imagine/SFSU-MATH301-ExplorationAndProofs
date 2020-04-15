@@ -1,0 +1,36 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 14}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Let $A$ be a nonempty subset of $\Z$ and $b\in\Z$, such that for each $a\in A$, $b\leq a$. Then $A$ has a smallest element.
+\end{proposition}
+
+\begin{proof}
+Assume $A$ is a nonempty subset of $\Z$ and $b\in\Z$ such that for each $a\in A$, $b\leq a$.  Furthermore, by definition, $b\leq a$ means $b=a$ or $b<a$ which can also be represented as
+\[a-b=0\text{ or }a-b\in\N.\]
+Notice that for our first case, if we add $1$ to both sides we get $a-b+1=1\in\N$ as stated by Proposition 2.3.  For our second case, we similary arrive at $a-b+1\in\N$ from using Axiom 2.1(i). Since both cases are true, we can form a nonempty set
+\[ S:=\left\{ k\in\N:k = a-b+1\right\}.\]
+Since $S\subseteq\N$, the Well-Ordering Principle affirms that $S$ has a smallest element.  I'm not completely sure if the rest here is correct, but I think that since we have a smallest element $k_0\in S$, we also have an element $a_0\in A$ such that $k_0 = a_0-b+1$.  Then we have to prove that for any element $a_x\in A$, $a_0\leq a_x$.  We can now state that $a_x-b+1\in S$, so it follows that
+\begin{align*}
+k_0&\leq a_x-b+1\\
+a_0-b+1&\leq a_x-b+1.
+\end{align*}
+Writing the previous expression as \[(a_x-b+1)-(a_0-b+1)\in\N,\]allows us to simplify the statement and conclude that $a_x-a_0\in\N$ or $a_0\leq a_x$, proving the proposition.
+\end{proof}
+
+\end{document}
+(a_x-b+1)-(a_0-b+1)&\in\N
+a_x - a_0&\in\N\\
+a_0&\leq a_x.

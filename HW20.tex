@@ -1,0 +1,35 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 20}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Assume we are given an equivalence relation on a set $A$.  For all $a_1,a_2\in A$, $[a_1] = [a_2]$ or $[a_1] \cap [a_2] = \varnothing$.
+\end{proposition}
+
+\begin{proof}
+Let $a_1,a_2\in A$.  We have two cases: $a_1 \sim a_2$ or $a_1 \not\sim a_2$.
+
+For our first case, $a_1 \sim a_2$, invoking Proposition 6.4(ii) results in $[a_1] = [a_2]$.
+
+For our second case, $a_1 \not\sim a_2$, let us assume $x \in [a_1]$ and $x \in [a_2]$ to produce a contradiction.  By definition, this means $x \sim a_1$ and $x \sim a_2$.  By the property of transitivity, $a_1 \sim a_2$, producing a contradiction.  Therefore we have proven that $a_1 \not\sim a_2$.
+
+
+
+
+%$a_1 \in [a_1]$ and $a_2 \notin [a_1]$.  Furthermore, $a_2 \notin [a_1]$ can be represented as $a_2 \in [a_1]\complement$.  Since it can never be the case that $a \in [a_1]$ and $a \notin [a_1]$, we can write $[a_1] \cap [a_1]\complement = \varnothing$.  Because $a_2 \in [a_2]$ and $a_2 \in [a_1]\complement$, it can be deduced that $[a_1] \cap [a_2] = \varnothing$, proving our proposition.
+\end{proof}
+
+\end{document}

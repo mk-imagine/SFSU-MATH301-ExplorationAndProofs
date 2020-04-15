@@ -1,0 +1,47 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 13}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+For all integers $k\geq2, k^2<k^3$.
+\end{proposition}
+
+\begin{proof}
+We will proceed with induction.
+
+For our base case, $k = 2$, notice that $2^2 < 2^3$ or $4 < 8$.
+
+Moving on to the induction step, we assume that $n^2 < n^3$ for some integer $n\geq2$.  Expanding $(n+1)^3$ to $n^3 + (3n^2 + 3n + 1)$, we can apply Proposition 2.7(i) to assert that
+\[ n^3 + (3n^2 + 3n + 1) > n^2 + (3n^2 + 3n + 1)\]
+which can be further simplified to form
+\[(n+1)^3 > (n+1)^2 + (3n^2 + n).\]
+
+To continue, let us examine the expression $(3n^2 + n)$ and proceed by proving that $(3n^2 + n)\in\N$.  Since $n\in\Z$ and $n\geq2$, Proposition 2.13 allows us to affirm that $n\in\N$.  Proposition 2.9 then allows us to say $n^2\in\N$, which can be followed by Axiom 2.1(ii) to state $3n^2\in\N$.  Next, applying Axiom 2.1(i) allows us to conclude that $(3n^2 + n)\in\N$.  Observe that since
+\begin{align*}
+(3n^2 + n)\in\N,\text{ and}\\
+(3n^2 + n) = (3n^2 + n) - 0,
+\end{align*}
+we can write $(3n^2 + n) - 0\in\N$ or \[(3n^2 + n) > 0.\]
+Utilizing Proposition 2.7(i), we find that $(3n^2 + n) > 0$ can be expressed as
+\[(3n^2 + n) + (n+1)^2 > 0 + (n+1)^2.\]
+Rearranging and simplifying this statement yields the expression
+\[(n+1)^2 + (3n^2 + n) > (n+1)^2.\]
+By using Proposition 2.4 with this statement and our previous assertion,
+\[(n+1)^3 > (n+1)^2 + (3n^2 + n),\]
+we can conclude that
+\[(n+1)^3 > (n+1)^2,\]
+which proves that for all integers $k\geq2, k^2<k^3$.
+\end{proof}
+
+\end{document}

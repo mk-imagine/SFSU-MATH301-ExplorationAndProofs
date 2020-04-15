@@ -1,0 +1,35 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 5}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $m$ and $n$ are even integers, then so are $m+n$ and $mn$.
+\end{proposition}
+
+\begin{proof}
+We begin by assuming that we are given even numbers $m,n\in\Z$.  We need to prove that $m+n$ and $mn$ are also even. First, we are provided with the definition that an even number $m$ is divisible by $2$ such that $m=i2$ where $i\in\Z$.  Likewise, we can depict $n$ as $j2$ where $j\in\Z$.  Let us first evaluate the statement $m+n$.  Using the property of replacement, we can substitute $i2$ for $m$ and $i2$ for $n$, which allows us to write the expression $m+n$ as $i2 + j2$.  By using Proposition 1.6, it follows that from $i2 + j2$, we can form $(i + j)2$.  From this, we can now deduce that $m+n=(i + j)2$.  Moving onwards to the statement $mn$,  we can also substitute $i2$ for $m$ and $j2$ for $n$ to form the statement $(i2)\cdot(j2)$.  Axiom 1.1(v) allows us to move the parentheses in $(i2)\cdot(j2)$ to form $((i2)j)2$.  Again, it can be determined that $mn=((i2)j)2$.  Thus we have poven that
+\begin{align*}
+m+n&\stackrel{\text{Substitute}}{=}i2 + j2\\
+&\stackrel{\text{Ax 1.1(iii)}}{=}(i + j)2.
+\end{align*}
+Furthermore, we have also poven that
+\begin{align*}
+mn&\stackrel{\text{Substitute}}{=}(i2) \cdot (j2)\\
+&\stackrel{\text{Ax 1.1(v)}}{=}((i2)j)2.
+\end{align*}
+In conclusion, if $m$ and $n$ are even integers, then so are $m+n$ and $mn$.
+\end{proof}
+
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{ amssymb }
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\complement}{^{\mathsf{c}}}
+
+\newtheorem*{proposition}{Proposition}
+
+\title{301 Homework 39}
+\author{Mark Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+If $(x_k)$ converges to $L$ and $L\prime$ then $L=L\prime$.
+\end{proposition}
+
+\begin{proof}
+Assume $(x_k)$ converges to $L$ and $L^\prime$.  To prove $L = L^\prime$, we use Proposition 10.11.  In other words, we prove that, for any $\epsilon > 0$, $\lvert L - L^\prime\rvert < \epsilon$.
+
+Let $\epsilon > 0$ be given.\\
+Since $(x_k)$ converges to $L$, choose $N_1\in\N$ such that for every $n\geq N_1$, \[\lvert x_n-L\rvert < \frac{\epsilon}{2}.\]
+Since $(x_k)$ converges to $L^\prime$, choose $N_2\in\N$ such that for every $n\geq N_2$, \[\lvert x_n-L^\prime\rvert < \frac{\epsilon}{2}.\]
+Choose $N$ to be $N_1$ if $N_1 > N_2$ or $N_2$ if $N_2>N_1$.  Using the triangle inequality, we see that
+\begin{align*}
+\lvert L-L^\prime\rvert \leq \lvert L-x_n\rvert + \lvert x_n -L^\prime\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+\end{align*}
+\end{proof}
+
+\section*{Revision}
+
+\begin{proof}
+Assume $(x_k)$ converges to $L$ and $L^\prime$.  To prove $L = L^\prime$, we use Proposition 10.11.  In other words, we prove that, for any $\epsilon > 0$, $\lvert L - L^\prime\rvert < \epsilon$.
+
+Let $\epsilon > 0$ be given.\\
+Since $(x_k)$ converges to $L$, choose $N_1\in\N$ such that for every $n\geq N_1$, \[\lvert x_n-L\rvert < \frac{\epsilon}{2}.\]
+Since $(x_k)$ converges to $L^\prime$, choose $N_2\in\N$ such that for every $n\geq N_2$, \[\lvert x_n-L^\prime\rvert < \frac{\epsilon}{2}.\]
+Define $N=N_1+N_2$ such that\footnote{I completely missed defining the expression in terms of $n$ with regards to $N$}
+\begin{align*}
+\lvert L - x_n\rvert &< \frac{\epsilon}{2}\text{, and }\lvert x_n-L^\prime\rvert < \frac{\epsilon}{2}.
+\end{align*}
+Let $n\geq N$.\footnote{Needed to relate $n$ to $N$}  Using the triangle inequality, we see that
+\begin{align*}
+\lvert L-L^\prime\rvert = \lvert (L - x_n) + (x_n-L^\prime)\rvert \leq \lvert L - x_n \rvert + \lvert x_n-L^\prime\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+\end{align*}
+\end{proof}
+\end{document}
